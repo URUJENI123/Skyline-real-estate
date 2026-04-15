@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – Skyline Real Estate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li class="dropdown"><a href="listings.html">Listing <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="listings.html?type=buy">Buy</a><a href="listings.html?type=rent">Rent</a><a href="listings.html?type=sell">Sell</a></div></li>
+      <li class="dropdown"><a href="agents.html">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="agents.html">Our Agents</a><a href="agents.html#join">Join Team</a></div></li>
+    </ul>
+    <a href="contact.html" class="btn-contact">Contact us</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gallery</span></div>
+      <h1>Property <em>Gallery</em></h1>
+      <p>A visual showcase of our most stunning properties and interior designs.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--clr-bg);">
+    <div class="container">
+
+      <!-- GALLERY FILTER -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;justify-content:center;" id="galleryTabs">
+        <button class="tab active" onclick="filterGallery('all',this)" style="background:var(--clr-primary);color:#fff;">All</button>
+        <button class="tab" onclick="filterGallery('exterior',this)">Exterior</button>
+        <button class="tab" onclick="filterGallery('interior',this)">Interior</button>
+        <button class="tab" onclick="filterGallery('bedroom',this)">Bedroom</button>
+        <button class="tab" onclick="filterGallery('kitchen',this)">Kitchen</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+  <div class="modal-overlay" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div><p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p><div class="socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="listings.html">Listings</a></li><li><a href="agents.html">Agents</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Property Types</h4><ul><li><a href="#">Apartments</a></li><li><a href="#">Villas & Houses</a></li><li><a href="#">Commercial</a></li><li><a href="#">Land & Plots</a></li><li><a href="#">Luxury Homes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li><li><i class="fa-solid fa-phone"></i> +250 788 123 456</li><li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li></ul><div class="clock-box"><i class="fa-regular fa-clock"></i><span id="liveClock"></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const galleryItems = [
+      { src:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80', alt:'Modern Villa Exterior', cat:'exterior' },
+      { src:'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80', alt:'Luxury Living Room', cat:'interior' },
+      { src:'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80', alt:'Modern Kitchen', cat:'kitchen' },
+      { src:'https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=600&q=80', alt:'Master Bedroom', cat:'bedroom' },
+      { src:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80', alt:'Exterior Pool View', cat:'exterior' },
+      { src:'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80', alt:'Penthouse Interior', cat:'interior' },
+      { src:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', alt:'Family Home', cat:'exterior' },
+      { src:'https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=600&q=80', alt:'Elegant Bedroom', cat:'bedroom' },
+      { src:'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80', alt:'Designer Kitchen', cat:'kitchen' },
+      { src:'https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80', alt:'Suburban Home', cat:'exterior' },
+      { src:'https://images.unsplash.com/photo-1598928636135-d146006ff4be?w=600&q=80', alt:'Cozy Bedroom', cat:'bedroom' },
+      { src:'https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?w=600&q=80', alt:'Open Plan Living', cat:'interior' },
+    ];
+
+    function renderGallery(items) {
+      const grid = document.getElementById('galleryGrid');
+      grid.innerHTML = items.map(item => `
+        <div class="gallery-item reveal" data-cat="${item.cat}">
+          <img src="${item.src}" alt="${item.alt}" loading="lazy"/>
+          <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>
+      `).join('');
+      // Re-init reveal and lightbox
+      document.querySelectorAll('.reveal').forEach(el => {
+        const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+        obs.observe(el);
+      });
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const img = item.querySelector('img');
+          const modal = document.getElementById('modal');
+          document.getElementById('modalTitle').textContent = img.alt;
+          document.getElementById('modalBody').innerHTML = `<img src="${img.src}" alt="${img.alt}" style="width:100%;border-radius:8px;"/>`;
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+    }
+
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('#galleryTabs .tab').forEach(t => { t.classList.remove('active'); t.style.background=''; t.style.color=''; });
+      btn.classList.add('active');
+      btn.style.background = 'var(--clr-primary)'; btn.style.color = '#fff';
+      const filtered = cat === 'all' ? galleryItems : galleryItems.filter(i => i.cat === cat);
+      renderGallery(filtered);
+    }
+
+    renderGallery(galleryItems);
+  </script>
+</body>
+</html>

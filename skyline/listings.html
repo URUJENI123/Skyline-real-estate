@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listings – Skyline Real Estate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="dropdown">
+        <a href="listings.html" class="active">Listing 
+          <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="listings.html?type=buy">Buy</a>
+          <a href="listings.html?type=rent">Rent</a>
+          <a href="listings.html?type=sell">Sell</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="agents.html">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="agents.html">Our Agents</a>
+          <a href="agents.html#join">Join Team</a>
+        </div>
+      </li>
+    </ul>
+    <a href="contact.html" class="btn-contact">Contact us</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Listings</span>
+      </div>
+      <h1>Property <em>Listings</em></h1>
+      <p>Browse our curated selection of premium properties across East Africa.</p>
+    </div>
+  </div>
+
+  <section class="section listings-section">
+    <div class="container">
+
+      <!-- FILTERS -->
+      <div class="filters-bar reveal">
+        <select class="filter-select" id="filterType">
+          <option value="">All Types</option>
+          <option value="buy">For Sale</option>
+          <option value="rent">For Rent</option>
+          <option value="sell">Sell Property</option>
+        </select>
+        <select class="filter-select" id="filterBeds">
+          <option value="">Any Bedrooms</option>
+          <option value="2">2+ Beds</option>
+          <option value="3">3+ Beds</option>
+          <option value="4">4+ Beds</option>
+          <option value="5">5+ Beds</option>
+        </select>
+        <select class="filter-select" id="filterPrice">
+          <option value="">Any Price</option>
+          <option value="low">Under $300K</option>
+          <option value="mid">$300K – $500K</option>
+          <option value="high">Above $500K</option>
+        </select>
+        <select class="filter-select" id="filterLocation">
+          <option value="">All Locations</option>
+          <option value="kiyovu">Kiyovu</option>
+          <option value="nyarutarama">Nyarutarama</option>
+          <option value="gacuriro">Gacuriro</option>
+          <option value="kimihurura">Kimihurura</option>
+          <option value="remera">Remera</option>
+        </select>
+        <button class="filter-btn" id="filterBtn"><i class="fa-solid fa-sliders"></i> Apply Filters</button>
+      </div>
+
+      <!-- RESULTS COUNT -->
+      <p id="resultsCount" style="color:var(--clr-muted);font-size:0.875rem;margin-bottom:24px;"></p>
+
+      <!-- GRID -->
+      <div class="cards-grid" id="listingsGrid"></div>
+    </div>
+  </section>
+
+  <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+  <div class="modal-overlay" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <i class="fa-solid fa-building"></i> Skyline</div>
+          <p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="#">Apartments</a></li>
+          <li><a href="#">Villas & Houses</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Land & Plots</a></li>
+          <li><a href="#">Luxury Homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li>
+          <li><i class="fa-solid fa-phone"></i> +250 788 123 456</li>
+          <li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li>
+        </ul>
+        <div class="clock-box">
+          <i class="fa-regular fa-clock"></i>
+          <span id="liveClock"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Override renderListings to also update count
+    const origRender = window.renderListings;
+    const countEl = document.getElementById('resultsCount');
+    document.getElementById('filterBtn') && document.getElementById('filterBtn').addEventListener('click', () => {
+      setTimeout(() => {
+        const cards = document.querySelectorAll('#listingsGrid .prop-card');
+        if (countEl) countEl.textContent = `Showing ${cards.length} propert${cards.length !== 1 ? 'ies' : 'y'}`;
+      }, 50);
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const cards = document.querySelectorAll('#listingsGrid .prop-card');
+        if (countEl) countEl.textContent = `Showing ${cards.length} propert${cards.length !== 1 ? 'ies' : 'y'}`;
+      }, 100);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline – Find Your Dream House</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <i class="fa-solid fa-building"></i> Skyline
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="dropdown">
+        <a href="listings.html">Listing <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="listings.html?type=buy">Buy</a>
+          <a href="listings.html?type=rent">Rent</a>
+          <a href="listings.html?type=sell">Sell</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="agents.html">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="agents.html">Our Agents</a>
+          <a href="agents.html#join">Join Team</a>
+        </div>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="btn-contact">Contact us</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <img src="photo (1).jpg" alt="Dream House"
+        class="hero-img" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"></div>
+      <h1 class="hero-title">Find your<br><span class="hero-title-main">Dream</span> <em>House</em></h1>
+      <p class="hero-subtitle">Crafting urban masterpieces, we redefine cityscapes by seamlessly blending modern real
+        estate into iconic skylines.</p>
+
+      <!-- SEARCH BAR -->
+      <div class="search-box">
+        <div class="search-tabs">
+          <button class="tab active" data-tab="buy">Buy</button>
+          <button class="tab" data-tab="rent">Rent</button>
+          <button class="tab" data-tab="sell">Sell</button>
+        </div>
+        <div class="search-fields">
+          <div class="field">
+            <label>Location</label>
+            <input type="text" placeholder="Search destination" id="locationInput" />
+          </div>
+          <div class="field">
+            <label>Check-in</label>
+            <input type="date" id="checkinInput" />
+          </div>
+          <div class="field">
+            <label>Check-out</label>
+            <input type="date" id="checkoutInput" />
+          </div>
+          <div class="field">
+            <label>Peoples</label>
+            <input type="number" placeholder="Add guests" min="1" id="guestsInput" />
+          </div>
+          <button class="btn-search" onclick="handleSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-count="12000">0</span><span>+</span>
+        <p>Properties Listed</p>
+      </div>
+      <div class="stat"><span class="stat-num" data-count="8500">0</span><span>+</span>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat"><span class="stat-num" data-count="150">0</span><span>+</span>
+        <p>Expert Agents</p>
+      </div>
+      <div class="stat"><span class="stat-num" data-count="25">0</span><span>+</span>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED LISTINGS -->
+  <section class="section featured">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Featured Properties</span>
+        <h2>Explore Our <em>Premium</em> Listings</h2>
+        <p>Hand-picked luxury properties that redefine modern living.</p>
+      </div>
+      <div class="cards-grid" id="featuredCards">
+        <!-- Cards injected by JS -->
+      </div>
+      <div class="center-btn">
+        <a href="listings.html" class="btn-outline">View All Properties <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section why-us">
+    <div class="container why-grid">
+      <div class="why-img">
+        <img src="photo8.jpg" alt="Modern interior" />
+        <div class="why-badge-card">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <strong>Award Winning</strong>
+            <span>Best Agency 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="why-text">
+        <span class="tag">Why Choose Skyline</span>
+        <h2>We Make Your <em>Dream</em> a Reality</h2>
+        <p>With over 25 years of experience in the real estate market, Skyline offers unmatched expertise, transparency,
+          and a personalized approach to every client.</p>
+        <div class="features-list">
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div><strong>Trusted & Verified</strong>
+              <p>All listings are verified and authenticated by our expert team.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-headset"></i></div>
+            <div><strong>24/7 Support</strong>
+              <p>Our agents are always available to assist you at any time.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div><strong>Market Insights</strong>
+              <p>Get the latest market data to make smart investment decisions.</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn-primary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE SLIDER / GALLERY TEASER -->
+  <section class="section slider-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Gallery</span>
+        <h2>Luxury <em>Interiors</em></h2>
+      </div>
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <div class="slide active"><img src="photo10.jpg"
+              alt="Interior 1" />
+            <div class="slide-caption">Modern Living Room</div>
+          </div>
+          <div class="slide"><img src="photo-28.avif"
+              alt="Interior 2" />
+            <div class="slide-caption">Minimalist Kitchen</div>
+          </div>
+          <div class="slide"><img src="photo-27.avif"
+              alt="Interior 3" />
+            <div class="slide-caption">Master Bedroom Suite</div>
+          </div>
+          <div class="slide"><img src="photo-26.avif"
+              alt="Interior 4" />
+            <div class="slide-caption">Designer Bathroom</div>
+          </div>
+        </div>
+        <button class="slider-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Testimonials</span>
+        <h2>What Our <em>Clients</em> Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Skyline helped us find our dream home in just two weeks. The process was seamless and stress-free. Highly
+            recommend!"</p>
+          <div class="client"><img src="photo-25.avif" alt="Client" />
+            <div><strong>Sarah Johnson</strong><span>Homeowner, Kigali</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card featured-testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"The best real estate experience I've ever had. Professional agents, fair prices, and an amazing selection
+            of properties."</p>
+          <div class="client"><img src="photo-23.avif" alt="Client" />
+            <div><strong>Michael Chen</strong><span>Investor, Nairobi</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"We sold our property above asking price thanks to Skyline's expert marketing strategy. Outstanding
+            service!"</p>
+          <div class="client"><img src="photo-24.avif" alt="Client" />
+            <div><strong>Amara Diallo</strong><span>Seller, Kampala</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK/LIGHT MODE TOGGLE (floating) -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+    <i class="fa-solid fa-moon" id="themeIcon"></i>
+  </button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <h3 id="modalTitle">Property Details</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+        <p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="#">Apartments</a></li>
+          <li><a href="#">Villas & Houses</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Land & Plots</a></li>
+          <li><a href="#">Luxury Homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li>
+          <li><i class="fa-solid fa-phone"></i> +250 788 123 456</li>
+          <li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li>
+        </ul>
+        <!-- Real-time clock -->
+        <div class="clock-box">
+          <i class="fa-regular fa-clock"></i>
+          <span id="liveClock"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

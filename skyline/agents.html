@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agents – Skyline Real Estate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="dropdown">
+        <a href="listings.html">Listing <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="listings.html?type=buy">Buy</a>
+          <a href="listings.html?type=rent">Rent</a>
+          <a href="listings.html?type=sell">Sell</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="agents.html" class="active">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+        <div class="dropdown-menu">
+          <a href="agents.html">Our Agents</a>
+          <a href="agents.html#join">Join Team</a>
+        </div>
+      </li>
+    </ul>
+    <a href="contact.html" class="btn-contact">Contact us</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span><span>Agents</span></div>
+      <h1>Our <em>Expert</em> Agents</h1>
+      <p>Meet the passionate professionals dedicated to finding you the perfect property.</p>
+    </div>
+  </div>
+
+  <!-- GREETING -->
+  <div style="text-align:center;padding:32px 0 0;font-family:var(--font-display);font-size:1.4rem;color:var(--clr-primary);" id="dynamicGreeting"></div>
+
+  <section class="section" style="background:var(--clr-bg)">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Our Team</span>
+        <h2>150+ <em>Dedicated</em> Agents</h2>
+        <p>Each agent undergoes rigorous training and brings deep local market knowledge.</p>
+      </div>
+      <div class="agents-grid">
+        <!-- Agent cards -->
+        <div class="agent-card reveal">
+          <img src="photo-17.jpg" class="agent-img" alt="James"/>
+          <div class="agent-body">
+            <div class="agent-name">James Mutabazi</div>
+            <div class="agent-role">Senior Luxury Agent</div>
+            <div class="agent-stats">
+              <span><strong>48</strong>Listings</span>
+              <span><strong>5★</strong>Rating</span>
+              <span><strong>8yr</strong>Experience</span>
+            </div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+        <div class="agent-card reveal">
+          <img src="photo-16.jpg" class="agent-img" alt="Sarah"/>
+          <div class="agent-body">
+            <div class="agent-name">Sarah Ingabire</div>
+            <div class="agent-role">Residential Specialist</div>
+            <div class="agent-stats"><span><strong>62</strong>Listings</span><span><strong>5★</strong>Rating</span><span><strong>11yr</strong>Experience</span></div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+        <div class="agent-card reveal">
+          <img src="photo-15.jpg" class="agent-img" alt="Peter"/>
+          <div class="agent-body">
+            <div class="agent-name">Peter Habimana</div>
+            <div class="agent-role">Commercial Property Agent</div>
+            <div class="agent-stats"><span><strong>31</strong>Listings</span><span><strong>4.8★</strong>Rating</span><span><strong>6yr</strong>Experience</span></div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+        <div class="agent-card reveal">
+          <img src="photo-14.jpg" class="agent-img" alt="Amira"/>
+          <div class="agent-body">
+            <div class="agent-name">Amira Nkurunziza</div>
+            <div class="agent-role">Investment Advisor</div>
+            <div class="agent-stats"><span><strong>55</strong>Listings</span><span><strong>5★</strong>Rating</span><span><strong>9yr</strong>Experience</span></div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+        <div class="agent-card reveal">
+          <img src="photo-13.jpg" class="agent-img" alt="Eric"/>
+          <div class="agent-body">
+            <div class="agent-name">Eric Nsanzimana</div>
+            <div class="agent-role">Land & Plots Specialist</div>
+            <div class="agent-stats"><span><strong>29</strong>Listings</span><span><strong>4.9★</strong>Rating</span><span><strong>5yr</strong>Experience</span></div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+        <div class="agent-card reveal">
+          <img src="photo-12.jpg" class="agent-img" alt="Diane"/>
+          <div class="agent-body">
+            <div class="agent-name">Diane Uwase</div>
+            <div class="agent-role">Rental Property Agent</div>
+            <div class="agent-stats"><span><strong>74</strong>Listings</span><span><strong>5★</strong>Rating</span><span><strong>12yr</strong>Experience</span></div>
+            <div class="agent-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN TEAM -->
+  <section class="section" id="join" style="background:var(--clr-surface)">
+    <div class="container" style="max-width:700px">
+      <div class="section-head">
+        <span class="tag">Careers</span>
+        <h2>Join the <em>Skyline</em> Team</h2>
+        <p>We're always looking for talented, driven individuals to join our growing family.</p>
+      </div>
+      <div style="background:var(--clr-bg);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)">
+        <div style="display:grid;gap:16px;margin-bottom:24px;">
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--clr-surface);border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-check-circle" style="color:var(--clr-primary);font-size:1.3rem;flex-shrink:0;"></i>
+            <div><strong>Competitive commission structure</strong><p style="color:var(--clr-muted);font-size:0.82rem;margin-top:2px;">Earn up to 4% on every successful deal.</p></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--clr-surface);border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-check-circle" style="color:var(--clr-primary);font-size:1.3rem;flex-shrink:0;"></i>
+            <div><strong>World-class training</strong><p style="color:var(--clr-muted);font-size:0.82rem;margin-top:2px;">Ongoing mentorship and professional development programs.</p></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:16px;background:var(--clr-surface);border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-check-circle" style="color:var(--clr-primary);font-size:1.3rem;flex-shrink:0;"></i>
+            <div><strong>Flexible working hours</strong><p style="color:var(--clr-muted);font-size:0.82rem;margin-top:2px;">Work remotely with full tech support and CRM tools.</p></div>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="contact.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+  <div class="modal-overlay" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div><p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p><div class="socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="listings.html">Listings</a></li><li><a href="agents.html">Agents</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Property Types</h4><ul><li><a href="#">Apartments</a></li><li><a href="#">Villas & Houses</a></li><li><a href="#">Commercial</a></li><li><a href="#">Land & Plots</a></li><li><a href="#">Luxury Homes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li><li><i class="fa-solid fa-phone"></i> +250 788 123 456</li><li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li></ul><div class="clock-box"><i class="fa-regular fa-clock"></i><span id="liveClock"></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

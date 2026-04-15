@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Skyline Real Estate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li class="dropdown"><a href="listings.html">Listing <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="listings.html?type=buy">Buy</a><a href="listings.html?type=rent">Rent</a><a href="listings.html?type=sell">Sell</a></div></li>
+      <li class="dropdown"><a href="agents.html">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="agents.html">Our Agents</a><a href="agents.html#join">Join Team</a></div></li>
+    </ul>
+    <a href="contact.html" class="btn-contact active" style="background:var(--clr-primary);color:#fff;">Contact us</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+      <h1>Get in <em>Touch</em></h1>
+      <p>Whether you're buying, selling, or renting — our team is ready to help.</p>
+    </div>
+  </div>
+
+  <section class="section contact-section">
+    <div class="container contact-grid">
+
+      <!-- LEFT INFO -->
+      <div class="contact-info reveal">
+        <span class="tag">Contact Us</span>
+        <h2>Let's Start a <em>Conversation</em></h2>
+        <p>Reach out to our team and we'll get back to you within 24 hours. We'd love to help you find your next home.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><strong>Our Office</strong><span>KG 567 Street, Kiyovu, Kigali, Rwanda</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><strong>Phone</strong><span>+250 788 123 456</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong>Email</strong><span>info@skyline.rw</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-regular fa-clock"></i></div>
+            <div><strong>Office Hours</strong><span>Mon–Fri 8:00 AM – 6:00 PM EAT</span></div>
+          </div>
+        </div>
+
+        <!-- MAP EMBED PLACEHOLDER -->
+        <div style="margin-top:32px;border-radius:var(--radius);overflow:hidden;height:200px;background:var(--clr-bg);display:flex;align-items:center;justify-content:center;border:1px solid var(--clr-border);">
+          <div style="text-align:center;color:var(--clr-muted);">
+            <i class="fa-solid fa-map-location-dot" style="font-size:2.5rem;color:var(--clr-primary);margin-bottom:8px;display:block;"></i>
+            <p style="font-size:0.875rem;">Kigali, Rwanda</p>
+            <p style="font-size:0.78rem;opacity:0.6;">Interactive map coming soon</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form-wrap reveal">
+        <h3>Send Us a <em style="color:var(--clr-primary);font-style:italic;">Message</em></h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" placeholder="e.g. John"/>
+              <span class="form-error">First name is required</span>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" placeholder="e.g. Doe"/>
+              <span class="form-error">Last name is required</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="john@example.com"/>
+              <span class="form-error">Valid email is required</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+250 7XX XXX XXX"/>
+              <span class="form-error">Phone number is required</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject">
+              <option value="">Select a subject</option>
+              <option>I want to buy a property</option>
+              <option>I want to rent a property</option>
+              <option>I want to sell my property</option>
+              <option>General enquiry</option>
+              <option>Agent partnership</option>
+            </select>
+            <span class="form-error">Please select a subject</span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" placeholder="Tell us how we can help you..."></textarea>
+            <span class="form-error">Message cannot be empty</span>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="formSuccess">
+          <i class="fa-solid fa-circle-check" style="color:#2e7d32;"></i>
+          <strong style="font-size:1.1rem;display:block;margin-bottom:6px;">Message Sent!</strong>
+          <p style="font-size:0.875rem;">Thank you for reaching out. One of our agents will contact you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background:var(--clr-bg);">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head">
+        <span class="tag">FAQ</span>
+        <h2>Frequently Asked <em>Questions</em></h2>
+      </div>
+      <div id="faqList" style="display:flex;flex-direction:column;gap:12px;"></div>
+    </div>
+  </section>
+
+  <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+  <div class="modal-overlay" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div><p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p><div class="socials"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="listings.html">Listings</a></li><li><a href="agents.html">Agents</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Property Types</h4><ul><li><a href="#">Apartments</a></li><li><a href="#">Villas & Houses</a></li><li><a href="#">Commercial</a></li><li><a href="#">Land & Plots</a></li><li><a href="#">Luxury Homes</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li><li><i class="fa-solid fa-phone"></i> +250 788 123 456</li><li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li></ul><div class="clock-box"><i class="fa-regular fa-clock"></i><span id="liveClock"></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // FAQ accordion
+    const faqs = [
+      { q: 'How do I start searching for a property?', a: 'Simply use the search bar on our homepage. Enter a location, select your dates and preferences, then click the search button. You can also browse our Listings page directly.' },
+      { q: 'Do I need to pay to list my property on Skyline?', a: 'We offer both free and premium listing packages. Contact our team to discuss the best option for your needs.' },
+      { q: 'How long does it take to buy a property through Skyline?', a: 'The timeline varies, but our team works to streamline the process. On average, from offer acceptance to completion takes 4–8 weeks.' },
+      { q: 'Are all listed properties verified?', a: 'Yes. Every property on Skyline undergoes a verification process by our in-house team before being published.' },
+      { q: 'Can I schedule a property viewing?', a: 'Absolutely! Click the "Contact Agent" button on any listing, or reach out via our Contact page to book a viewing.' }
+    ];
+    const faqList = document.getElementById('faqList');
+    faqList && faqs.forEach((f, i) => {
+      const item = document.createElement('div');
+      item.style.cssText = 'background:var(--clr-surface);border-radius:var(--radius-sm);border:1px solid var(--clr-border);overflow:hidden;';
+      item.innerHTML = `
+        <button onclick="toggleFaq(${i})" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-size:0.95rem;font-weight:500;color:var(--clr-text);text-align:left;font-family:var(--font-body);">
+          ${f.q}
+          <i class="fa-solid fa-chevron-down fa-xs" id="faqIcon${i}" style="flex-shrink:0;margin-left:12px;transition:transform 0.3s;"></i>
+        </button>
+        <div id="faqBody${i}" style="display:none;padding:0 20px 16px;color:var(--clr-muted);font-size:0.875rem;line-height:1.7;">${f.a}</div>
+      `;
+      faqList.appendChild(item);
+    });
+    function toggleFaq(i) {
+      const body = document.getElementById('faqBody' + i);
+      const icon = document.getElementById('faqIcon' + i);
+      const isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : 'block';
+      icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+  </script>
+</body>
+</html>

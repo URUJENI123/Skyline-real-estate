@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Skyline Real Estate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand"><i class="fa-solid fa-building"></i> Skyline</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li>
+      <li class="dropdown"><a href="listings.html">Listing <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="listings.html?type=buy">Buy</a><a href="listings.html?type=rent">Rent</a><a href="listings.html?type=sell">Sell</a></div></li>
+      <li class="dropdown"><a href="agents.html">Agents <i class="fa-solid fa-chevron-down fa-xs"></i></a><div class="dropdown-menu"><a href="agents.html">Our Agents</a><a href="agents.html#join">Join Team</a></div></li>
+    </ul>
+    <a href="contact.html" class="btn-contact">Contact us</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Blog & News</span></div>
+      <h1>News &amp; <em>Insights</em></h1>
+      <p>Market updates, property tips, and expert advice from our team of specialists.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--clr-bg);">
+    <div class="container">
+
+      <!-- FEATURED POST -->
+      <div class="reveal" style="background:var(--clr-surface);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:56px;box-shadow:var(--shadow);">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Featured" style="width:100%;height:360px;object-fit:cover;"/>
+        <div style="padding:40px;">
+          <span class="tag">Featured Story</span>
+          <h2 style="font-family:var(--font-display);font-size:1.8rem;margin:14px 0 12px;line-height:1.25;">Rwanda's Real Estate Market Surges in 2026: What Buyers Need to Know</h2>
+          <div class="blog-meta">
+            <span><i class="fa-solid fa-user"></i> David Kamau</span>
+            <span><i class="fa-regular fa-calendar"></i> April 10, 2026</span>
+            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+          </div>
+          <p style="color:var(--clr-muted);font-size:0.9rem;line-height:1.7;margin-bottom:24px;">Kigali's property market continues its impressive upward trajectory in 2026, driven by strong foreign investment, rapid urbanisation, and a stable regulatory environment...</p>
+          <a href="#" class="btn-primary">Read Full Article</a>
+        </div>
+      </div>
+
+      <!-- BLOG GRID -->
+      <div class="section-head" style="text-align:left;margin-bottom:32px;">
+        <span class="tag">Latest Articles</span>
+        <h2>Recent <em>Posts</em></h2>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+  <div class="modal-overlay" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><h3 id="modalTitle"></h3><div id="modalBody"></div></div></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <i class="fa-solid fa-building"></i> Skyline</div>
+          <p>Crafting urban masterpieces and redefining cityscapes with iconic real estate solutions.</p>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="agents.html">Agents</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="#">Apartments</a></li>
+          <li><a href="#">Villas & Houses</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Land & Plots</a></li>
+          <li><a href="#">Luxury Homes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> KG 567 St, Kigali, Rwanda</li>
+          <li><i class="fa-solid fa-phone"></i> +250 788 123 456</li>
+          <li><i class="fa-solid fa-envelope"></i> info@skyline.rw</li>
+        </ul>
+        <div class="clock-box">
+          <i class="fa-regular fa-clock"></i>
+          <span id="liveClock"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Skyline Real Estate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const posts = [
+      { img:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80', author:'Sarah Ingabire', date:'Apr 8, 2026', read:'4 min', title:'Top 5 Neighbourhoods to Invest in Kigali Right Now', excerpt:'From Nyarutarama to Kimihurura, we break down the hottest investment zones with strong ROI potential in 2026.' },
+      { img:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', author:'James Mutabazi', date:'Apr 5, 2026', read:'3 min', title:'How to Secure a Mortgage in Rwanda: A Complete Guide', excerpt:'Navigating home financing in Rwanda doesn\'t have to be stressful. Our step-by-step guide covers everything from bank requirements to interest rates.' },
+      { img:'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80', author:'Amira Nkurunziza', date:'Apr 1, 2026', read:'6 min', title:'Interior Design Trends Dominating Kigali Homes in 2026', excerpt:'Open-plan living, biophilic design, and smart home integration are reshaping how Kigali\'s most desirable properties are designed and fitted.' },
+      { img:'https://images.unsplash.com/photo-1600607687939-ce8a6d5b9b4e?w=600&q=80', author:'Eric Nsanzimana', date:'Mar 28, 2026', read:'5 min', title:'Land Titles in Rwanda: What Every Property Buyer Must Verify', excerpt:'Understanding the Rwandan land registration system is critical before any purchase. Here\'s our expert checklist.' },
+      { img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80', author:'Diane Uwase', date:'Mar 22, 2026', read:'4 min', title:'Renting vs. Buying: Which Makes More Sense in Kigali Today?', excerpt:'We crunch the numbers and consider lifestyle factors to help you make the most informed decision for your situation.' },
+      { img:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80', author:'Grace Uwimana', date:'Mar 15, 2026', read:'3 min', title:'How Skyline\'s Virtual Tours Are Changing Property Searches', excerpt:'Our new 360° virtual tour technology means you can explore properties from anywhere in the world before making a decision.' },
+    ];
+
+    const grid = document.getElementById('blogGrid');
+    grid && (grid.innerHTML = posts.map(p => `
+      <div class="blog-card reveal">
+        <img src="${p.img}" alt="${p.title}" class="blog-img" loading="lazy"/>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><i class="fa-solid fa-user"></i> ${p.author}</span>
+            <span><i class="fa-regular fa-calendar"></i> ${p.date}</span>
+            <span><i class="fa-regular fa-clock"></i> ${p.read}</span>
+          </div>
+          <div class="blog-title">${p.title}</div>
+          <p class="blog-excerpt">${p.excerpt}</p>
+          <a href="#" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    `).join(''));
+
+    // Trigger reveal
+    document.querySelectorAll('.reveal').forEach(el => {
+      const obs = new IntersectionObserver(e => { e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('visible'); obs.unobserve(x.target); } }); }, { threshold: 0.1 });
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
